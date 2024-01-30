@@ -1,3 +1,4 @@
+import 'package:clienteapp/src/pages/Cliente/cliente_page.dart';
 import 'package:clienteapp/src/shared/themes/themes.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
@@ -12,9 +13,11 @@ class AppWidget extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       theme: lighttheme,
       darkTheme: darktheme,
-      title: 'Green Track',
-      routes: const {},
-      // home: ,
+      title: 'Cliente',
+      routes: {
+        '/cliente': (context) => const ClientePage(),
+      },
+      home: const ClientePage(),
     );
   }
 }
